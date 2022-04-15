@@ -1,0 +1,12 @@
+; Variable declarations
+(declare-fun x () Int)
+(declare-fun y () Int)
+
+; Constraints
+(assert (> (+ x y) (- 5)))
+(assert (< (- x y) 5))
+(assert (>= (- (* 2 x) y) 15))
+(assert (<= (+ x (* 3 y)) 7))
+
+; Solve
+(check-sat)
